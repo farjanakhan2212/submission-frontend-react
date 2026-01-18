@@ -1,30 +1,39 @@
 {
-  "name": "submission-frontend",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+  "name": "@babel/types",
+  "version": "7.28.5",
+  "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+  "author": "The Babel Team (https://babel.dev/team)",
+  "homepage": "https://babel.dev/docs/en/next/babel-types",
+  "bugs": "https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20types%22+is%3Aopen",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-types"
+  },
+  "main": "./lib/index.js",
   "dependencies": {
-    "axios": "^1.13.1",
-    "bootstrap": "^5.3.8",
-    "react": "^19.1.1",
-    "react-bootstrap": "^2.10.10",
-    "react-dom": "^19.1.1"
+    "@babel/helper-string-parser": "^7.27.1",
+    "@babel/helper-validator-identifier": "^7.28.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.4",
-    "eslint": "^9.36.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.22",
-    "globals": "^16.4.0",
-    "vite": "^7.1.7"
+    "@babel/generator": "^7.28.5",
+    "@babel/parser": "^7.28.5",
+    "glob": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "type": "commonjs",
+  "types": "./lib/index-legacy.d.ts",
+  "typesVersions": {
+    ">=4.1": {
+      "lib/index-legacy.d.ts": [
+        "lib/index.d.ts"
+      ]
+    }
   }
 }
